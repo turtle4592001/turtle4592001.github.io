@@ -1,36 +1,111 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
-<link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
-<title>HTML5, CSS3 and JavaScript demo</title>
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  <style>
+.jc{
+position:relative;
+}
+</style>
+
+<script language="JavaScript1.2">
+var ns6=document.getElementById&&!document.all
+var ie=document.all
+
+var customcollect=new Array()
+var i=0
+
+function jiggleit(num){
+if ((!document.all&&!document.getElementById)) return;
+customcollect[num].style.left=(parseInt(customcollect[num].style.left)==-1)? customcollect[num].style.left=1 : customcollect[num].style.left=-1
+}
+
+function init(){
+if (ie){
+while (eval("document.all.jiggle"+i)!=null){
+customcollect[i]= eval("document.all.jiggle"+i)
+i++
+} 
+}
+else if (ns6){
+while (document.getElementById("jiggle"+i)!=null){
+customcollect[i]= document.getElementById("jiggle"+i)
+i++
+}
+}
+
+if (customcollect.length==1)
+setInterval("jiggleit(0)",80)
+else if (customcollect.length>1)
+for (y=0;y<customcollect.length;y++){
+var tempvariable='setInterval("jiggleit('+y+')",'+'100)'
+eval(tempvariable)
+}
+}
+
+window.onload=init
+
+</script>
+
+</script>
+
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-<!-- Start your code here -->
-  <div class="jumbotron">
-  <h1>Y_@.<</h1>
-    <p> <font color="white">打個招呼 </font></p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button"> 不要按我 </a></p></div>
-  <div class="container">
-    <h3> <mark> <strong>標題 </strong> </mark> </h3>>
-     
+
+  <style>
+  figcaption{text-align:center;}
+  </style>
     
-     <p class="lead"> <u>內容 </u> </p>
+  <body background="https://farm8.staticflickr.com/7201/27311788162_3c50457b68_b.jpg"
+   bgproperties="fixed">
 
-  <h5>補充資料 </h5>
-  <img src="http://7.share.photo.xuite.net/aski691001/17b2d1f/3788389/143408826_c.jpg" class="img-responsive" alt="Responsive image">
- 
-  <h5> 結束 </h5>
-  <h4>謝謝觀看 </h4>  
-    <h4> <del> <em> 再見   <small><font color="blue"> YEEEEEE </font> </small> </em> </del>  </h4> 
-      <h3> <em> <kbd> Thank__for__watch </kbd>  </em>  </h3>  
-  </div>
-  
-  
+    
+    
+  <body>
+    <section>
+      <header>
+      <p align="center">
+        <font size="50" color="7E1FE1"><span id="jiggle0" class="jc">kimi</span>
+      </font>
+      <hr>
+      <p align="center">
+      <img src="http://i.epochtimes.com/assets/uploads/2016/07/tumblr_o9qh6afDlp1qzomoco1_540.gif" alt="" height="120" width="150" />
 
-<!-- End your code here -->
-<script type="text/javascript" src="js/script.js"></script>
+      </header>
+      <figcaption>
+        <font color="blue" size="6">
+        資工二乙<p>
+        40418251<p>
+        袁瑞炎
+        </font>
+      </figcaption>
+      <a href="https://ie113013.github.io/index1">
+       <font size="6" color="#FF1212">
+       </font>
+      </a>
+      <footer>
+        &copy 
+      </footer>
+          <font color="white">
+          <h3> <del> <em> 再見   <small> YEEEEEE </small> </em> </del>  </h3> 
+      <h2> <em> <kbd> Thank__for__watch </kbd>  </em>  </h2>  
+    
+
+          </font>
+          <body>
+            <div>
+              <audio scr="http://pool.f12.mymedia.yam.com/mediacenter/b54a293601f56672140383a3de35fb2d/5857cbc0/upload2/new/6/e/1/6e1e77dd087d667a3504fea2c1279a34.mp3" controls="autoplay" />
+            </div>
+            
+          <script type="text/javascript" src="js/script.js"></script>
 </body>
+    </section>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
 </html>
